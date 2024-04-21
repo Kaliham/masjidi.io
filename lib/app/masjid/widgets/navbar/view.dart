@@ -95,13 +95,13 @@ class Navbar extends HookConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Row(
         children: [
-          buildNavItem(context, ref, 'Home'),
+          NavItem(title: 'Home'),
           const SizedBox(width: 20),
-          buildNavItem(context, ref, 'About'),
+          NavItem(title: 'About'),
           const SizedBox(width: 20),
-          buildNavItem(context, ref, 'Contact'),
+          NavItem(title: 'Contact'),
           const SizedBox(width: 20),
-          buildNavItem(context, ref, 'Contact'),
+          NavItem(title: 'Contact'),
           const SizedBox(width: 20),
         ],
       ),
@@ -158,7 +158,7 @@ class NavItem extends HookConsumerWidget {
       child: InkWell(
         onTap: onTap,
         child: Text(
-          s,
+          title,
           style: GoogleFonts.robotoMono(
             fontWeight: FontWeight.w600,
             color: isSelected

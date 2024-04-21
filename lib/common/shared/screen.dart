@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class CommonScreenData {
   static const double kMobileBreakpoint = 640.0;
   static const double kTabletBreakpoint = 1024.0;
@@ -8,6 +10,8 @@ class CommonScreenData {
     kTabletBreakpoint: kTabletBreakpoint,
     kDesktopBreakpoint: kTabletBreakpoint,
   );
+  static bool isMobile(BuildContext context) =>
+      MediaQuery.of(context).size.width <= kMobileBreakpoint;
 }
 
 class BreakPointCheck {

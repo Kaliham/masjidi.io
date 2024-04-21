@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:masjidi_io/app/masjid/screen/home/view.dart';
 import 'package:masjidi_io/app/masjid/widgets/navbar/pods/navpod.dart';
 import 'package:masjidi_io/app/masjid/widgets/navbar/view.dart';
-import 'package:masjidi_io/common/shared/colors.dart';
+import 'package:masjidi_io/common/shared/screen.dart';
 
 class MasjidPage extends HookConsumerWidget {
   const MasjidPage({super.key});
@@ -11,41 +12,23 @@ class MasjidPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final provider = ref.watch(navPodProvider);
     return Scaffold(
-      body: Container(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            const Navbar(),
-            provider.isOpen
-                ? Expanded(child: Column())
-                : Expanded(
-                    child: Column(
-                      children: [
-                        Expanded(
-                          flex: 8,
-                          child: Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                alignment: Alignment.bottomCenter,
-                                fit: BoxFit.cover,
-                                image: const AssetImage(
-                                    'assets/backgrounds/1.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 7,
-                          child: Container(
-                              color: MasjidiTheme.current.backgroundColor),
-                        ),
-                      ],
-                    ),
-                  )
-          ],
-        ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          const Navbar(),
+          Expanded(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                if (provider.isOpen && CommonScreenData.isMobile(context)) {
+                  return const Expanded(child: Column());
+                }
+                return const Expanded(
+                  child: HomeScreen(),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
