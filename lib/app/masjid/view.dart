@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:masjidi_io/app/masjid/screen/home/view.dart';
+import 'package:masjidi_io/app/masjid/pages/home/view.dart';
 import 'package:masjidi_io/app/masjid/widgets/navbar/pods/navpod.dart';
 import 'package:masjidi_io/app/masjid/widgets/navbar/view.dart';
 import 'package:masjidi_io/common/shared/screen.dart';

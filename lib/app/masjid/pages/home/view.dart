@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:masjidi_io/common/shared/colors.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({
+class HomePage extends StatelessWidget {
+  static const route = '/';
+  const HomePage({
     super.key,
   });
 

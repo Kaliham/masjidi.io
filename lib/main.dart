@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:masjidi_io/app/utils/auth/view.dart';
+import 'package:masjidi_io/common/utils/auth/view.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
