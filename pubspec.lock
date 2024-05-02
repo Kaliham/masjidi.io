@@ -337,10 +337,10 @@ packages:
     dependency: "direct main"
     description:
       name: go_router
-      sha256: "67b83df7a1260c81686afe4ac1b29566cbb815f73f4e44c26f1c602c3cdd3f0f"
+      sha256: "9e0f7d1a3e7dc5010903e330fbc5497872c4c3cf6626381d69083cc1d5113c1e"
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.7"
+    version: "14.0.2"
   google_fonts:
     dependency: "direct main"
     description:
@@ -605,14 +605,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
-  path_to_regexp:
-    dependency: transitive
-    description:
-      name: path_to_regexp
-      sha256: "169d78fbd55e61ea8873bcca545979f559d22238f66facdd7ef30870c7f53327"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
   platform:
     dependency: transitive
     description:
@@ -932,4 +924,4 @@ packages:
     version: "2.0.0"
 sdks:
   dart: ">=3.2.3 <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.16.0"

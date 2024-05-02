@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:masjidi_io/app/masjid/pages/home/view.dart';
 import 'package:masjidi_io/app/masjid/widgets/navbar/pods/navpod.dart';
 import 'package:masjidi_io/app/masjid/widgets/navbar/view.dart';
+import 'package:masjidi_io/app/pages/home/view.dart';
 import 'package:masjidi_io/common/shared/screen.dart';
 
-class MasjidPage extends HookConsumerWidget {
-  const MasjidPage({super.key});
+class MasjidApp extends HookConsumerWidget {
+  static const route = '/masjid';
+  const MasjidApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -23,7 +24,7 @@ class MasjidPage extends HookConsumerWidget {
                   return const Expanded(child: Column());
                 }
                 return const Expanded(
-                  child: HomeScreen(),
+                  child: HomePage(),
                 );
               },
             ),
@@ -32,4 +33,8 @@ class MasjidPage extends HookConsumerWidget {
       ),
     );
   }
+}
+
+class HomeScreen {
+  const HomeScreen();
 }
